@@ -1,0 +1,55 @@
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class MatchMessageAdapter extends TypeAdapter<MatchMessage> {
+  @override
+  final int typeId = 8;
+
+  @override
+  MatchMessage read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return MatchMessage(
+      msgType: fields[6] as String?,
+      isDeleted: fields[5] as bool?,
+      createdAt: fields[4] as String?,
+      message: fields[0] as String?,
+      senderId: fields[1] as String?,
+      senderUsername: fields[2] as String?,
+      senderProfilImageURl: fields[3] as String?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, MatchMessage obj) {
+    writer
+      ..writeByte(7)
+      ..writeByte(0)
+      ..write(obj.message)
+      ..writeByte(1)
+      ..write(obj.senderId)
+      ..writeByte(2)
+      ..write(obj.senderUsername)
+      ..writeByte(3)
+      ..write(obj.senderProfilImageURl)
+      ..writeByte(4)
+      ..write(obj.createdAt)
+      ..writeByte(5)
+      ..write(obj.isDeleted)
+      ..writeByte(6)
+      ..write(obj.msgType);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MatchMessageAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

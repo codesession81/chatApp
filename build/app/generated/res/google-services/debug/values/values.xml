@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">261753885907-2p24b47a3akkjgqrpcs2vjqvk98kankf.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">261753885907</string>
+    <string name="google_api_key" translatable="false">AIzaSyArAEorfPFJ_l5w2tAPmiER2YjfH0vmKjs</string>
+    <string name="google_app_id" translatable="false">1:261753885907:android:1615ed3ee4c57d2e7af026</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyArAEorfPFJ_l5w2tAPmiER2YjfH0vmKjs</string>
+    <string name="google_storage_bucket" translatable="false">joobie-db68d.appspot.com</string>
+    <string name="project_id" translatable="false">joobie-db68d</string>
+</resources>

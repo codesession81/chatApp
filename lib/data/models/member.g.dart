@@ -1,0 +1,80 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'member.dart';
+
+// **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class MemberAdapter extends TypeAdapter<Member> {
+  @override
+  final int typeId = 9;
+
+  @override
+  Member read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return Member(
+      profilVerified: fields[10] as String?,
+      email: fields[1] as String?,
+      profilVerificationStatus: fields[13] as String?,
+      uid: fields[0] as String?,
+      profilVerifiedImage: fields[12] as String?,
+      username: fields[2] as String?,
+      gender: fields[3] as String?,
+      age: fields[4] as String?,
+      town: fields[5] as String?,
+      profilImage: fields[6] as String?,
+      lastLoginDate: fields[8] as String?,
+      onlineStatus: fields[7] as String?,
+      profilVerifiedCode: fields[11] as String?,
+      registerDate: fields[9] as String?,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, Member obj) {
+    writer
+      ..writeByte(14)
+      ..writeByte(0)
+      ..write(obj.uid)
+      ..writeByte(1)
+      ..write(obj.email)
+      ..writeByte(2)
+      ..write(obj.username)
+      ..writeByte(3)
+      ..write(obj.gender)
+      ..writeByte(4)
+      ..write(obj.age)
+      ..writeByte(5)
+      ..write(obj.town)
+      ..writeByte(6)
+      ..write(obj.profilImage)
+      ..writeByte(7)
+      ..write(obj.onlineStatus)
+      ..writeByte(8)
+      ..write(obj.lastLoginDate)
+      ..writeByte(9)
+      ..write(obj.registerDate)
+      ..writeByte(10)
+      ..write(obj.profilVerified)
+      ..writeByte(11)
+      ..write(obj.profilVerifiedCode)
+      ..writeByte(12)
+      ..write(obj.profilVerifiedImage)
+      ..writeByte(13)
+      ..write(obj.profilVerificationStatus);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MemberAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
